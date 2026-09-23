@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Shield-shaped body -->
+  <path d="M32 10 L50 20 L50 44 L32 54 L14 44 L14 20 Z" fill="#6A3FD4"/>
+  <path d="M32 16 L46 24 L46 42 L32 50 L18 42 L18 24 Z" fill="#3B2FE8" opacity="0.5"/>
+  <!-- Scutellum (triangle on back) -->
+  <path d="M32 22 L40 30 L24 30 Z" fill="#3B2FE8"/>
+  <!-- Eyes -->
+  <circle cx="26" cy="20" r="2.5" fill="#E8E8FF"/>
+  <circle cx="38" cy="20" r="2.5" fill="#E8E8FF"/>
+  <circle cx="26.5" cy="20" r="1.2" fill="#0A0A12"/>
+  <circle cx="38.5" cy="20" r="1.2" fill="#0A0A12"/>
+  <!-- Antennae -->
+  <line x1="28" y1="15" x2="22" y2="8" stroke="#6A3FD4" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="36" y1="15" x2="42" y2="8" stroke="#6A3FD4" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Stink glands (sides) -->
+  <circle cx="13" cy="35" r="3" fill="#3B2FE8"/>
+  <circle cx="51" cy="35" r="3" fill="#3B2FE8"/>
+  <!-- Legs -->
+  <line x1="14" y1="28" x2="5" y2="24" stroke="#3B2FE8" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="14" y1="34" x2="4" y2="34" stroke="#3B2FE8" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="14" y1="40" x2="5" y2="46" stroke="#3B2FE8" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="50" y1="28" x2="59" y2="24" stroke="#6A3FD4" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="50" y1="34" x2="60" y2="34" stroke="#6A3FD4" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="50" y1="40" x2="59" y2="46" stroke="#6A3FD4" stroke-width="1.5" stroke-linecap="round"/>
+</svg>

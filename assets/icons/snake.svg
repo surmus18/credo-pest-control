@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Snake coil body -->
+  <path d="M8 52 Q8 40 20 36 Q32 32 32 22 Q32 12 40 10 Q50 8 54 16 Q58 24 52 30 Q46 36 38 32" stroke="#6A3FD4" stroke-width="7" stroke-linecap="round" fill="none"/>
+  <path d="M8 52 Q8 40 20 36 Q32 32 32 22 Q32 12 40 10 Q50 8 54 16 Q58 24 52 30 Q46 36 38 32" stroke="#3B2FE8" stroke-width="4" stroke-linecap="round" fill="none" stroke-dasharray="4 6"/>
+  <!-- Head -->
+  <ellipse cx="36" cy="31" rx="7" ry="5" fill="#3B2FE8"/>
+  <!-- Eyes -->
+  <circle cx="34" cy="29" r="2" fill="#E8E8FF"/>
+  <circle cx="34.5" cy="29" r="1" fill="#0A0A12"/>
+  <!-- Forked tongue -->
+  <path d="M43 32 Q48 32 50 30" stroke="#6A3FD4" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+  <path d="M50 30 Q53 28 54 26" stroke="#6A3FD4" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+  <path d="M50 30 Q53 30 55 32" stroke="#6A3FD4" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+  <!-- Scale pattern -->
+  <ellipse cx="22" cy="38" rx="4" ry="2" fill="#3B2FE8" opacity="0.6" transform="rotate(-30 22 38)"/>
+  <ellipse cx="16" cy="44" rx="4" ry="2" fill="#3B2FE8" opacity="0.6" transform="rotate(-15 16 44)"/>
+</svg>

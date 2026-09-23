@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Body -->
+  <ellipse cx="32" cy="36" rx="9" ry="14" fill="#6A3FD4"/>
+  <!-- Head -->
+  <ellipse cx="32" cy="19" rx="8" ry="7" fill="#3B2FE8"/>
+  <!-- Eyes -->
+  <circle cx="28" cy="18" r="2" fill="#E8E8FF"/>
+  <circle cx="36" cy="18" r="2" fill="#E8E8FF"/>
+  <circle cx="28.5" cy="18" r="1" fill="#0A0A12"/>
+  <circle cx="36.5" cy="18" r="1" fill="#0A0A12"/>
+  <!-- Dewlap/throat -->
+  <ellipse cx="32" cy="26" rx="5" ry="3" fill="#3B2FE8" opacity="0.8"/>
+  <!-- Tail -->
+  <path d="M36 46 Q44 50 50 54 Q56 58 58 56" stroke="#6A3FD4" stroke-width="4" stroke-linecap="round" fill="none"/>
+  <!-- Front legs -->
+  <path d="M24 30 Q16 26 12 22" stroke="#3B2FE8" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <path d="M24 34 Q15 32 10 30" stroke="#3B2FE8" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <!-- Back legs -->
+  <path d="M40 34 Q48 32 54 30" stroke="#6A3FD4" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <path d="M40 40 Q48 40 54 38" stroke="#6A3FD4" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <!-- Toes -->
+  <path d="M12 22 Q10 19 9 17" stroke="#3B2FE8" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M12 22 Q11 19 12 17" stroke="#3B2FE8" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M12 22 Q13 19 14 17" stroke="#3B2FE8" stroke-width="1.5" stroke-linecap="round"/>
+</svg>

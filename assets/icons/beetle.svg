@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Elytra (hard wings) -->
+  <ellipse cx="32" cy="38" rx="11" ry="13" fill="#6A3FD4"/>
+  <!-- Wing split line -->
+  <line x1="32" y1="26" x2="32" y2="50" stroke="#0A0A12" stroke-width="1.5"/>
+  <!-- Head -->
+  <circle cx="32" cy="20" r="7" fill="#3B2FE8"/>
+  <!-- Pronotum -->
+  <ellipse cx="32" cy="29" rx="8" ry="5" fill="#3B2FE8"/>
+  <!-- Eyes -->
+  <circle cx="28" cy="19" r="2.2" fill="#E8E8FF"/>
+  <circle cx="36" cy="19" r="2.2" fill="#E8E8FF"/>
+  <circle cx="28.5" cy="19" r="1.1" fill="#0A0A12"/>
+  <circle cx="36.5" cy="19" r="1.1" fill="#0A0A12"/>
+  <!-- Antennae -->
+  <path d="M30 13 Q28 8 24 5" stroke="#3B2FE8" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+  <path d="M34 13 Q36 8 40 5" stroke="#3B2FE8" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+  <!-- Legs -->
+  <line x1="21" y1="31" x2="10" y2="27" stroke="#3B2FE8" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="21" y1="37" x2="9" y2="37" stroke="#3B2FE8" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="21" y1="43" x2="10" y2="49" stroke="#3B2FE8" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="43" y1="31" x2="54" y2="27" stroke="#6A3FD4" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="43" y1="37" x2="55" y2="37" stroke="#6A3FD4" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="43" y1="43" x2="54" y2="49" stroke="#6A3FD4" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Dots on elytra -->
+  <circle cx="27" cy="36" r="2" fill="#3B2FE8"/>
+  <circle cx="37" cy="40" r="2" fill="#3B2FE8"/>
+</svg>

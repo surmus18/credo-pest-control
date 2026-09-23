@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Web strands -->
+  <line x1="32" y1="4" x2="32" y2="60" stroke="#3B2FE8" stroke-width="0.8" opacity="0.4"/>
+  <line x1="4" y1="32" x2="60" y2="32" stroke="#3B2FE8" stroke-width="0.8" opacity="0.4"/>
+  <line x1="10" y1="10" x2="54" y2="54" stroke="#3B2FE8" stroke-width="0.8" opacity="0.4"/>
+  <line x1="54" y1="10" x2="10" y2="54" stroke="#3B2FE8" stroke-width="0.8" opacity="0.4"/>
+  <!-- Web circles -->
+  <circle cx="32" cy="32" r="10" stroke="#3B2FE8" stroke-width="0.8" opacity="0.35" fill="none"/>
+  <circle cx="32" cy="32" r="18" stroke="#3B2FE8" stroke-width="0.8" opacity="0.25" fill="none"/>
+  <circle cx="32" cy="32" r="26" stroke="#3B2FE8" stroke-width="0.8" opacity="0.15" fill="none"/>
+  <!-- Spider body (abdomen) -->
+  <circle cx="32" cy="36" r="8" fill="#6A3FD4"/>
+  <!-- Spider head -->
+  <circle cx="32" cy="25" r="5.5" fill="#3B2FE8"/>
+  <!-- Eyes -->
+  <circle cx="29.5" cy="24" r="1.3" fill="#E8E8FF"/>
+  <circle cx="34.5" cy="24" r="1.3" fill="#E8E8FF"/>
+  <circle cx="29.8" cy="24" r="0.6" fill="#0A0A12"/>
+  <circle cx="34.8" cy="24" r="0.6" fill="#0A0A12"/>
+  <!-- 8 legs -->
+  <path d="M24 28 Q16 22 10 18" stroke="#3B2FE8" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+  <path d="M24 32 Q15 30 8 32" stroke="#3B2FE8" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+  <path d="M24 36 Q15 38 8 42" stroke="#6A3FD4" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+  <path d="M24 40 Q16 46 10 50" stroke="#6A3FD4" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+  <path d="M40 28 Q48 22 54 18" stroke="#3B2FE8" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+  <path d="M40 32 Q49 30 56 32" stroke="#3B2FE8" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+  <path d="M40 36 Q49 38 56 42" stroke="#6A3FD4" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+  <path d="M40 40 Q48 46 54 50" stroke="#6A3FD4" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+</svg>

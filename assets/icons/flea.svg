@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Body -->
+  <ellipse cx="32" cy="36" rx="8" ry="12" fill="#6A3FD4"/>
+  <!-- Head -->
+  <circle cx="32" cy="21" r="6" fill="#3B2FE8"/>
+  <!-- Eyes -->
+  <circle cx="29" cy="20" r="1.8" fill="#E8E8FF"/>
+  <circle cx="35" cy="20" r="1.8" fill="#E8E8FF"/>
+  <circle cx="29.4" cy="20" r="0.9" fill="#0A0A12"/>
+  <circle cx="35.4" cy="20" r="0.9" fill="#0A0A12"/>
+  <!-- Hind jumping legs (longer) -->
+  <path d="M40 38 Q50 32 56 28" stroke="#6A3FD4" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <path d="M56 28 Q58 22 54 20" stroke="#6A3FD4" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <path d="M24 38 Q14 32 8 28" stroke="#3B2FE8" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <path d="M8 28 Q6 22 10 20" stroke="#3B2FE8" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <!-- Regular legs -->
+  <line x1="24" y1="30" x2="14" y2="26" stroke="#3B2FE8" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="40" y1="30" x2="50" y2="26" stroke="#6A3FD4" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Antennae -->
+  <line x1="30" y1="15" x2="26" y2="8" stroke="#3B2FE8" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="34" y1="15" x2="38" y2="8" stroke="#3B2FE8" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Spots on body -->
+  <circle cx="32" cy="33" r="2" fill="#3B2FE8"/>
+  <circle cx="32" cy="40" r="2" fill="#3B2FE8"/>
+</svg>

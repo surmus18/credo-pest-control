@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Bed shape -->
+  <rect x="8" y="36" width="48" height="20" rx="3" fill="#3B2FE8" opacity="0.5"/>
+  <rect x="8" y="32" width="48" height="8" rx="2" fill="#6A3FD4" opacity="0.4"/>
+  <!-- Bug body -->
+  <ellipse cx="32" cy="30" rx="10" ry="7" fill="#6A3FD4"/>
+  <!-- Head -->
+  <circle cx="32" cy="20" r="6" fill="#3B2FE8"/>
+  <!-- Eyes -->
+  <circle cx="29" cy="19" r="1.8" fill="#E8E8FF"/>
+  <circle cx="35" cy="19" r="1.8" fill="#E8E8FF"/>
+  <circle cx="29.4" cy="19" r="0.9" fill="#0A0A12"/>
+  <circle cx="35.4" cy="19" r="0.9" fill="#0A0A12"/>
+  <!-- Antennae -->
+  <line x1="30" y1="14" x2="26" y2="8" stroke="#3B2FE8" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="34" y1="14" x2="38" y2="8" stroke="#3B2FE8" stroke-width="1.5" stroke-linecap="round"/>
+  <circle cx="26" cy="8" r="1.5" fill="#6A3FD4"/>
+  <circle cx="38" cy="8" r="1.5" fill="#6A3FD4"/>
+  <!-- Legs -->
+  <line x1="22" y1="27" x2="10" y2="23" stroke="#3B2FE8" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="22" y1="31" x2="9" y2="31" stroke="#3B2FE8" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="42" y1="27" x2="54" y2="23" stroke="#6A3FD4" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="42" y1="31" x2="55" y2="31" stroke="#6A3FD4" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Blood dot -->
+  <circle cx="32" cy="30" r="2.5" fill="#3B2FE8"/>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Earwig body (elongated) -->
+  <ellipse cx="32" cy="36" rx="7" ry="16" fill="#6A3FD4"/>
+  <!-- Head -->
+  <circle cx="32" cy="18" r="6" fill="#3B2FE8"/>
+  <!-- Eyes -->
+  <circle cx="29" cy="17" r="1.8" fill="#E8E8FF"/>
+  <circle cx="35" cy="17" r="1.8" fill="#E8E8FF"/>
+  <circle cx="29.4" cy="17" r="0.9" fill="#0A0A12"/>
+  <circle cx="35.4" cy="17" r="0.9" fill="#0A0A12"/>
+  <!-- Antennae (long, segmented) -->
+  <path d="M30 12 Q27 7 23 4" stroke="#3B2FE8" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+  <path d="M34 12 Q37 7 41 4" stroke="#3B2FE8" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+  <!-- Forceps (pincers at tail) -->
+  <path d="M28 52 Q22 56 20 60" stroke="#6A3FD4" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <path d="M36 52 Q42 56 44 60" stroke="#6A3FD4" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <!-- Body segments -->
+  <line x1="25" y1="30" x2="39" y2="30" stroke="#3B2FE8" stroke-width="1" opacity="0.5"/>
+  <line x1="25" y1="37" x2="39" y2="37" stroke="#3B2FE8" stroke-width="1" opacity="0.5"/>
+  <line x1="25" y1="44" x2="39" y2="44" stroke="#3B2FE8" stroke-width="1" opacity="0.5"/>
+  <!-- Legs -->
+  <line x1="25" y1="28" x2="13" y2="24" stroke="#3B2FE8" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="25" y1="34" x2="12" y2="34" stroke="#3B2FE8" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="25" y1="40" x2="13" y2="46" stroke="#3B2FE8" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="39" y1="28" x2="51" y2="24" stroke="#6A3FD4" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="39" y1="34" x2="52" y2="34" stroke="#6A3FD4" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="39" y1="40" x2="51" y2="46" stroke="#6A3FD4" stroke-width="1.5" stroke-linecap="round"/>
+</svg>

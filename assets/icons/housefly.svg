@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Wings -->
+  <ellipse cx="18" cy="22" rx="14" ry="7" fill="#6A3FD4" opacity="0.7" transform="rotate(-20 18 22)"/>
+  <ellipse cx="46" cy="22" rx="14" ry="7" fill="#3B2FE8" opacity="0.7" transform="rotate(20 46 22)"/>
+  <!-- Body -->
+  <ellipse cx="32" cy="36" rx="7" ry="11" fill="#6A3FD4"/>
+  <!-- Head -->
+  <circle cx="32" cy="22" r="6" fill="#3B2FE8"/>
+  <!-- Eyes -->
+  <circle cx="29" cy="21" r="2" fill="#E8E8FF"/>
+  <circle cx="35" cy="21" r="2" fill="#E8E8FF"/>
+  <circle cx="29.5" cy="21" r="1" fill="#0A0A12"/>
+  <circle cx="35.5" cy="21" r="1" fill="#0A0A12"/>
+  <!-- Antennae -->
+  <line x1="30" y1="16" x2="24" y2="10" stroke="#3B2FE8" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="34" y1="16" x2="40" y2="10" stroke="#3B2FE8" stroke-width="1.5" stroke-linecap="round"/>
+  <circle cx="24" cy="10" r="1.5" fill="#6A3FD4"/>
+  <circle cx="40" cy="10" r="1.5" fill="#6A3FD4"/>
+  <!-- Legs -->
+  <line x1="25" y1="32" x2="12" y2="28" stroke="#6A3FD4" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="25" y1="36" x2="10" y2="36" stroke="#6A3FD4" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="25" y1="40" x2="12" y2="44" stroke="#6A3FD4" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="39" y1="32" x2="52" y2="28" stroke="#3B2FE8" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="39" y1="36" x2="54" y2="36" stroke="#3B2FE8" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="39" y1="40" x2="52" y2="44" stroke="#3B2FE8" stroke-width="1.5" stroke-linecap="round"/>
+</svg>

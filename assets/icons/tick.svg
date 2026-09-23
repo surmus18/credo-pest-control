@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Round body -->
+  <circle cx="32" cy="36" r="11" fill="#6A3FD4"/>
+  <!-- Head small -->
+  <circle cx="32" cy="22" r="6" fill="#3B2FE8"/>
+  <!-- Eyes (tiny) -->
+  <circle cx="29.5" cy="21" r="1.5" fill="#E8E8FF"/>
+  <circle cx="34.5" cy="21" r="1.5" fill="#E8E8FF"/>
+  <circle cx="29.8" cy="21" r="0.7" fill="#0A0A12"/>
+  <circle cx="34.8" cy="21" r="0.7" fill="#0A0A12"/>
+  <!-- 8 legs (tick has 8) -->
+  <path d="M21 30 Q12 26 8 22" stroke="#3B2FE8" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <path d="M21 34 Q12 34 8 32" stroke="#3B2FE8" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <path d="M21 38 Q12 40 8 44" stroke="#6A3FD4" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <path d="M21 42 Q12 48 10 52" stroke="#6A3FD4" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <path d="M43 30 Q52 26 56 22" stroke="#3B2FE8" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <path d="M43 34 Q52 34 56 32" stroke="#3B2FE8" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <path d="M43 38 Q52 40 56 44" stroke="#6A3FD4" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <path d="M43 42 Q52 48 54 52" stroke="#6A3FD4" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <!-- Body pattern -->
+  <circle cx="32" cy="36" r="5" fill="#3B2FE8" opacity="0.6"/>
+  <!-- Mouth parts -->
+  <line x1="32" y1="16" x2="32" y2="12" stroke="#6A3FD4" stroke-width="1.5" stroke-linecap="round"/>
+</svg>

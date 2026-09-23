@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Tail segments -->
+  <path d="M36 42 Q46 38 50 30 Q54 22 50 16 Q47 12 50 10" stroke="#6A3FD4" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <!-- Stinger -->
+  <path d="M50 10 Q55 7 54 4" stroke="#3B2FE8" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <circle cx="54" cy="4" r="2" fill="#3B2FE8"/>
+  <!-- Body -->
+  <ellipse cx="28" cy="40" rx="10" ry="7" fill="#6A3FD4"/>
+  <!-- Head/Cephalothorax -->
+  <ellipse cx="20" cy="36" rx="8" ry="6" fill="#3B2FE8"/>
+  <!-- Eyes -->
+  <circle cx="17" cy="34" r="1.5" fill="#E8E8FF"/>
+  <circle cx="23" cy="34" r="1.5" fill="#E8E8FF"/>
+  <!-- Claws -->
+  <path d="M14 32 Q8 26 5 22" stroke="#3B2FE8" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <path d="M5 22 Q2 18 4 16" stroke="#3B2FE8" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <path d="M5 22 Q4 18 7 16" stroke="#3B2FE8" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <path d="M14 34 Q8 30 5 28" stroke="#6A3FD4" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <path d="M5 28 Q2 24 4 22" stroke="#6A3FD4" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <path d="M5 28 Q4 24 7 23" stroke="#6A3FD4" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <!-- Legs -->
+  <line x1="22" y1="42" x2="14" y2="50" stroke="#6A3FD4" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="26" y1="44" x2="20" y2="54" stroke="#6A3FD4" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="30" y1="44" x2="28" y2="56" stroke="#6A3FD4" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="34" y1="44" x2="36" y2="54" stroke="#6A3FD4" stroke-width="1.5" stroke-linecap="round"/>
+</svg>

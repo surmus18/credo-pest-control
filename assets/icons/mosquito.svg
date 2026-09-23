@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Abdomen (striped) -->
+  <ellipse cx="32" cy="40" rx="8" ry="12" fill="#6A3FD4"/>
+  <rect x="24" y="35" width="16" height="3" rx="1" fill="#3B2FE8" opacity="0.6"/>
+  <rect x="24" y="41" width="16" height="3" rx="1" fill="#3B2FE8" opacity="0.6"/>
+  <rect x="24" y="47" width="16" height="3" rx="1" fill="#3B2FE8" opacity="0.6"/>
+  <!-- Thorax -->
+  <ellipse cx="32" cy="26" rx="6" ry="5" fill="#3B2FE8"/>
+  <!-- Head -->
+  <circle cx="32" cy="18" r="5" fill="#3B2FE8"/>
+  <!-- Long proboscis (beak for sucking) -->
+  <path d="M32 13 Q32 8 32 4" stroke="#6A3FD4" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <!-- Eyes (large compound) -->
+  <ellipse cx="28" cy="17" rx="3" ry="3.5" fill="#E8E8FF"/>
+  <ellipse cx="36" cy="17" rx="3" ry="3.5" fill="#E8E8FF"/>
+  <ellipse cx="28.5" cy="17" rx="1.5" ry="1.8" fill="#0A0A12"/>
+  <ellipse cx="36.5" cy="17" rx="1.5" ry="1.8" fill="#0A0A12"/>
+  <!-- Wings -->
+  <ellipse cx="20" cy="26" rx="11" ry="5" fill="#3B2FE8" opacity="0.4" transform="rotate(-15 20 26)"/>
+  <ellipse cx="44" cy="26" rx="11" ry="5" fill="#6A3FD4" opacity="0.4" transform="rotate(15 44 26)"/>
+  <!-- Legs -->
+  <line x1="26" y1="24" x2="14" y2="20" stroke="#3B2FE8" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="26" y1="28" x2="13" y2="28" stroke="#3B2FE8" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="38" y1="24" x2="50" y2="20" stroke="#6A3FD4" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="38" y1="28" x2="51" y2="28" stroke="#6A3FD4" stroke-width="1.5" stroke-linecap="round"/>
+</svg>
