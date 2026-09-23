@@ -38,6 +38,7 @@
         },
       };
     </script>
+    <link rel="icon" type="image/png" href="assets/logo-256.png" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body class="bg-white text-brand-text font-hind overflow-x-hidden">
@@ -151,23 +152,23 @@
         </div>
       </div>
       <nav id="navbar">
-        <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-10">
-          <div class="flex items-center justify-between h-[72px]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8">
+          <div class="navbar-row flex items-center justify-between">
             <a href="#home" class="flex items-center gap-3 flex-shrink-0">
               <img
                 src="assets/logo.png"
                 alt="CREDO Pest Control Logo"
-                class="h-12 w-auto"
+                class="h-10 sm:h-11 w-auto"
                 onerror="this.style.display = 'none'"
               />
-              <div class="hidden sm:block">
+              <div class="flex flex-col justify-center">
                 <div
-                  class="font-rajdhani font-700 text-lg leading-tight brand-gradient-text tracking-[0.2em]"
+                  class="font-rajdhani font-700 text-base sm:text-lg leading-tight brand-gradient-text tracking-[0.16em] sm:tracking-[0.2em]"
                 >
                   CREDO
                 </div>
                 <div
-                  class="text-brand-muted text-[10px] tracking-[0.2em] uppercase font-medium"
+                  class="text-brand-muted text-[9px] sm:text-[10px] tracking-[0.18em] sm:tracking-[0.2em] uppercase font-semibold"
                 >
                   Pest Control
                 </div>
@@ -196,6 +197,7 @@
                 </svg>
                 WhatsApp
               </a>
+              <div class="hidden md:block h-6 w-[1.5px] bg-slate-200"></div>
               <a href="tel:9994382776" class="hidden md:flex btn-primary gap-2">
                 <svg
                   class="w-4 h-4"
@@ -214,7 +216,7 @@
               </a>
               <button
                 id="menu-btn"
-                class="md:hidden text-brand-text p-2 rounded-lg border border-brand-border"
+                class="md:hidden text-brand-text p-2 rounded-full border border-brand-border hover:bg-slate-50 transition-colors"
                 aria-label="menu"
               >
                 <svg
@@ -234,47 +236,93 @@
             </div>
           </div>
         </div>
-        <div
-          id="mobile-menu"
-          class="hidden md:hidden bg-white border-t border-brand-border px-4 py-4 shadow-lg"
-        >
-          <div class="flex flex-col gap-3">
-            <a href="#home" class="nav-link" onclick="closeMobileMenu()"
-              >Home</a
-            >
-            <a
-              href="#services"
-              class="nav-link font-tamil"
-              onclick="closeMobileMenu()"
-              >சேவைகள்</a
-            >
-            <a href="#why-us" class="nav-link" onclick="closeMobileMenu()"
-              >Why CREDO</a
-            >
-            <a
-              href="#enquiry"
-              class="nav-link font-tamil"
-              onclick="closeMobileMenu()"
-              >பதிவு செய்க</a
-            >
-            <a href="#contact" class="nav-link" onclick="closeMobileMenu()"
-              >Contact</a
-            >
-            <div class="flex gap-3 pt-1">
-              <a href="tel:9994382776" class="btn-primary flex-1 justify-center"
-                >Call Now</a
-              >
-              <a
-                href="https://wa.me/919994382776"
-                target="_blank"
-                class="btn-wa flex-1 justify-center"
-                >WhatsApp</a
-              >
+      </nav>
+    </header>
+
+    <!-- ===== OFFCANVAS MOBILE DRAWER ===== -->
+    <div id="offcanvas-backdrop" class="offcanvas-backdrop" onclick="closeMobileMenu()"></div>
+    <div id="offcanvas-drawer" class="offcanvas-drawer" aria-label="Mobile Navigation">
+      <!-- Drawer Header -->
+      <div class="offcanvas-header">
+        <div class="flex items-center gap-2.5">
+          <img
+            src="assets/logo.png"
+            alt="CREDO Pest Control Logo"
+            class="h-9 w-auto"
+            onerror="this.style.display = 'none'"
+          />
+          <div class="flex flex-col justify-center">
+            <div class="font-rajdhani font-700 text-base leading-tight brand-gradient-text tracking-[0.16em]">
+              CREDO
+            </div>
+            <div class="text-brand-muted text-[9px] tracking-[0.18em] uppercase font-semibold">
+              Pest Control
             </div>
           </div>
         </div>
-      </nav>
-    </header>
+        <button
+          id="offcanvas-close"
+          class="offcanvas-close-btn"
+          aria-label="Close menu"
+          onclick="closeMobileMenu()"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Drawer Body Navigation Links -->
+      <div class="offcanvas-body">
+        <a href="#home" class="offcanvas-link" onclick="closeMobileMenu()">
+          <span>Home</span>
+          <svg class="w-4 h-4 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#services" class="offcanvas-link" onclick="closeMobileMenu()">
+          <span>Our Services</span>
+          <span class="link-tamil">சேவைகள்</span>
+        </a>
+        <a href="#why-us" class="offcanvas-link" onclick="closeMobileMenu()">
+          <span>Why CREDO</span>
+          <svg class="w-4 h-4 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#enquiry" class="offcanvas-link" onclick="closeMobileMenu()">
+          <span>Book Inspection</span>
+          <span class="link-tamil">பதிவு செய்க</span>
+        </a>
+        <a href="#reviews" class="offcanvas-link" onclick="closeMobileMenu()">
+          <span>Reviews</span>
+          <span class="link-tamil">கருத்துக்கள்</span>
+        </a>
+        <a href="#faq" class="offcanvas-link" onclick="closeMobileMenu()">
+          <span>FAQ</span>
+          <span class="link-tamil">கேள்விகள்</span>
+        </a>
+        <a href="#contact" class="offcanvas-link" onclick="closeMobileMenu()">
+          <span>Contact Us</span>
+          <svg class="w-4 h-4 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <!-- Drawer Footer with Quick Contact Actions -->
+      <div class="offcanvas-footer">
+        <a href="tel:9994382776" class="btn-primary justify-center gap-2">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.09-1.09a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92v2z"/>
+          </svg>
+          <span class="font-tamil">அழையுங்கள் 9994382776</span>
+        </a>
+        <a href="https://wa.me/919994382776?text=Hi%2C%20I%20need%20pest%20control%20service" target="_blank" rel="noopener noreferrer" class="btn-wa justify-center gap-2">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.558 4.122 1.532 5.86L.057 23.885l6.17-1.617A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.882a9.875 9.875 0 01-5.034-1.376l-.36-.214-3.733.979 1-3.642-.235-.374A9.86 9.86 0 012.118 12C2.118 6.532 6.532 2.118 12 2.118S21.882 6.532 21.882 12 17.468 21.882 12 21.882z"/>
+          </svg>
+          <span>WhatsApp Chat</span>
+        </a>
+        <div class="text-center text-xs text-slate-500 font-tamil mt-0.5">
+          வேலூர் &amp; சுற்றுவட்டாரங்கள் | 24/7 Service
+        </div>
+      </div>
+    </div>
 
     <!-- ===== HERO SLIDER ===== -->
     <section id="home" class="hero-slider-wrap">
@@ -600,181 +648,257 @@
           </p>
         </div>
         <div class="svc-old-grid">
-          <div class="service-card reveal" id="svc-housefly">
-            <div class="service-icon">
-              <img src="assets/icons/housefly.svg" alt="Housefly" />
+          <div class="service-card reveal" id="svc-cockroach">
+            <div class="service-card-img">
+              <img src="assets/pests/cockroach.jpg" alt="Cockroach" loading="lazy" />
             </div>
-            <h3 class="service-name">Housefly</h3>
-            <p class="service-name-tamil">வீட்டு ஈ</p>
-            <p class="service-desc">Complete fly elimination</p>
-          </div>
-          <div class="service-card reveal" id="svc-honeybee">
-            <div class="service-icon">
-              <img src="assets/icons/honeybee.svg" alt="Honey Bees" />
+            <div class="service-card-footer">
+              <div class="service-title-row">
+                <h3 class="service-name">Cockroach</h3>
+                <span class="service-name-tamil">கரப்பான் பூச்சி</span>
+              </div>
+              <p class="service-desc">Gel baiting &amp; spray</p>
             </div>
-            <h3 class="service-name">Honey Bees</h3>
-            <p class="service-name-tamil">தேனீக்கள்</p>
-            <p class="service-desc">Safe hive removal</p>
-          </div>
-          <div class="service-card reveal" id="svc-stinging">
-            <div class="service-icon">
-              <img
-                src="assets/icons/honeybee.svg"
-                alt="Stinging Insects"
-                class="hue-shift"
-              />
-            </div>
-            <h3 class="service-name">Stinging Insects</h3>
-            <p class="service-name-tamil">கொடுக்கும் பூச்சி</p>
-            <p class="service-desc">Wasp &amp; hornet control</p>
-          </div>
-          <div class="service-card reveal" id="svc-scorpion">
-            <div class="service-icon">
-              <img src="assets/icons/scorpion.svg" alt="Scorpion" />
-            </div>
-            <h3 class="service-name">Scorpion</h3>
-            <p class="service-name-tamil">தேள்</p>
-            <p class="service-desc">Full inspection &amp; removal</p>
-          </div>
-          <div class="service-card reveal" id="svc-lizard">
-            <div class="service-icon">
-              <img src="assets/icons/lizard.svg" alt="Lizards" />
-            </div>
-            <h3 class="service-name">Lizards</h3>
-            <p class="service-name-tamil">பல்லி</p>
-            <p class="service-desc">Humane deterrent solutions</p>
-          </div>
-          <div class="service-card reveal" id="svc-rodent">
-            <div class="service-icon">
-              <img src="assets/icons/rodent.svg" alt="Rodents" />
-            </div>
-            <h3 class="service-name">Rodents</h3>
-            <p class="service-name-tamil">எலிகள்</p>
-            <p class="service-desc">Rat trapping &amp; exclusion</p>
-          </div>
-          <div class="service-card reveal" id="svc-snake">
-            <div class="service-icon">
-              <img src="assets/icons/snake.svg" alt="Snakes" />
-            </div>
-            <h3 class="service-name">Snakes</h3>
-            <p class="service-name-tamil">பாம்பு</p>
-            <p class="service-desc">Safe snake removal</p>
-          </div>
-          <div class="service-card reveal" id="svc-ant">
-            <div class="service-icon">
-              <img src="assets/icons/ant.svg" alt="Ants" />
-            </div>
-            <h3 class="service-name">Ants</h3>
-            <p class="service-name-tamil">எறும்பு</p>
-            <p class="service-desc">Colony elimination</p>
-          </div>
-          <div class="service-card reveal" id="svc-gnat">
-            <div class="service-icon">
-              <img src="assets/icons/gnat.svg" alt="Gnats" />
-            </div>
-            <h3 class="service-name">Gnats</h3>
-            <p class="service-name-tamil">சிறு ஈக்கள்</p>
-            <p class="service-desc">Source elimination</p>
-          </div>
-          <div class="service-card reveal" id="svc-weevil">
-            <div class="service-icon">
-              <img src="assets/icons/weevil.svg" alt="Weevils" />
-            </div>
-            <h3 class="service-name">Weevils</h3>
-            <p class="service-name-tamil">தானிய வண்டு</p>
-            <p class="service-desc">Fumigation treatment</p>
-          </div>
-          <div class="service-card reveal" id="svc-spider">
-            <div class="service-icon">
-              <img src="assets/icons/spider.svg" alt="Spiders" />
-            </div>
-            <h3 class="service-name">Spiders</h3>
-            <p class="service-name-tamil">சிலந்திகள்</p>
-            <p class="service-desc">Web removal &amp; spray</p>
-          </div>
-          <div class="service-card reveal" id="svc-bedbug">
-            <div class="service-icon">
-              <img src="assets/icons/bedbug.svg" alt="Bed Bugs" />
-            </div>
-            <h3 class="service-name">Bed Bugs</h3>
-            <p class="service-name-tamil">மெத்தை பூச்சி</p>
-            <p class="service-desc">Heat &amp; chemical treatment</p>
-          </div>
-          <div class="service-card reveal" id="svc-earwig">
-            <div class="service-icon">
-              <img src="assets/icons/earwig.svg" alt="Earwigs" />
-            </div>
-            <h3 class="service-name">Earwigs</h3>
-            <p class="service-name-tamil">காது பூச்சி</p>
-            <p class="service-desc">Barrier spray treatment</p>
-          </div>
-          <div class="service-card reveal" id="svc-beetle">
-            <div class="service-icon">
-              <img src="assets/icons/beetle.svg" alt="Beetles" />
-            </div>
-            <h3 class="service-name">Beetles</h3>
-            <p class="service-name-tamil">வண்டுகள்</p>
-            <p class="service-desc">Fabric beetle control</p>
-          </div>
-          <div class="service-card reveal" id="svc-stinkbug">
-            <div class="service-icon">
-              <img src="assets/icons/stinkbug.svg" alt="Stink Bugs" />
-            </div>
-            <h3 class="service-name">Stink Bugs</h3>
-            <p class="service-name-tamil">துர்நாற்ற பூச்சி</p>
-            <p class="service-desc">Exclusion &amp; perimeter spray</p>
-          </div>
-          <div class="service-card reveal" id="svc-flea">
-            <div class="service-icon">
-              <img src="assets/icons/flea.svg" alt="Fleas" />
-            </div>
-            <h3 class="service-name">Fleas</h3>
-            <p class="service-name-tamil">தளர் உண்ணிகள்</p>
-            <p class="service-desc">Full property treatment</p>
-          </div>
-          <div class="service-card reveal" id="svc-fly">
-            <div class="service-icon">
-              <img
-                src="assets/icons/housefly.svg"
-                alt="Flies"
-                style="transform: scaleX(-1)"
-              />
-            </div>
-            <h3 class="service-name">Flies</h3>
-            <p class="service-name-tamil">ஈக்கள்</p>
-            <p class="service-desc">ILT traps &amp; baiting</p>
           </div>
           <div class="service-card reveal" id="svc-termite">
-            <div class="service-icon">
-              <img src="assets/icons/termite.svg" alt="Termites" />
+            <div class="service-card-img">
+              <img src="assets/pests/termite.jpg" alt="Termites" loading="lazy" />
             </div>
-            <h3 class="service-name">Termites</h3>
-            <p class="service-name-tamil">கறையான்</p>
-            <p class="service-desc">Pre &amp; post-construction</p>
+            <div class="service-card-footer">
+              <div class="service-title-row">
+                <h3 class="service-name">Termites</h3>
+                <span class="service-name-tamil">கறையான்</span>
+              </div>
+              <p class="service-desc">Pre &amp; post-construction</p>
+            </div>
           </div>
-          <div class="service-card reveal" id="svc-cockroach">
-            <div class="service-icon">
-              <img src="assets/icons/cockroach.svg" alt="Cockroaches" />
+          <div class="service-card reveal" id="svc-rodent">
+            <div class="service-card-img">
+              <img src="assets/pests/rodent.jpg" alt="Rodents" loading="lazy" />
             </div>
-            <h3 class="service-name">Cockroaches</h3>
-            <p class="service-name-tamil">கரப்பான் பூச்சி</p>
-            <p class="service-desc">Gel baiting &amp; spray</p>
-          </div>
-          <div class="service-card reveal" id="svc-tick">
-            <div class="service-icon">
-              <img src="assets/icons/tick.svg" alt="Ticks" />
+            <div class="service-card-footer">
+              <div class="service-title-row">
+                <h3 class="service-name">Rodents</h3>
+                <span class="service-name-tamil">எலிகள்</span>
+              </div>
+              <p class="service-desc">Rat trapping &amp; exclusion</p>
             </div>
-            <h3 class="service-name">Ticks</h3>
-            <p class="service-name-tamil">உண்ணிகள்</p>
-            <p class="service-desc">Indoor &amp; outdoor control</p>
           </div>
           <div class="service-card reveal" id="svc-mosquito">
-            <div class="service-icon">
-              <img src="assets/icons/mosquito.svg" alt="Mosquitoes" />
+            <div class="service-card-img">
+              <img src="assets/pests/mosquito.jpg" alt="Mosquitoes" loading="lazy" />
             </div>
-            <h3 class="service-name">Mosquitoes</h3>
-            <p class="service-name-tamil">கொசுக்கள்</p>
-            <p class="service-desc">Fogging &amp; larviciding</p>
+            <div class="service-card-footer">
+              <div class="service-title-row">
+                <h3 class="service-name">Mosquitoes</h3>
+                <span class="service-name-tamil">கொசுக்கள்</span>
+              </div>
+              <p class="service-desc">Fogging &amp; larviciding</p>
+            </div>
+          </div>
+          <div class="service-card reveal" id="svc-bedbug">
+            <div class="service-card-img">
+              <img src="assets/pests/bedbug.jpg" alt="Bed Bugs" loading="lazy" />
+            </div>
+            <div class="service-card-footer">
+              <div class="service-title-row">
+                <h3 class="service-name">Bed Bugs</h3>
+                <span class="service-name-tamil">மெத்தை பூச்சி</span>
+              </div>
+              <p class="service-desc">Heat &amp; chemical treatment</p>
+            </div>
+          </div>
+          <div class="service-card reveal" id="svc-ant">
+            <div class="service-card-img">
+              <img src="assets/pests/ant.jpg" alt="Ants" loading="lazy" />
+            </div>
+            <div class="service-card-footer">
+              <div class="service-title-row">
+                <h3 class="service-name">Ants</h3>
+                <span class="service-name-tamil">எறும்பு</span>
+              </div>
+              <p class="service-desc">Colony elimination</p>
+            </div>
+          </div>
+          <div class="service-card reveal" id="svc-snake">
+            <div class="service-card-img">
+              <img src="assets/pests/snake.jpg" alt="Snakes" loading="lazy" />
+            </div>
+            <div class="service-card-footer">
+              <div class="service-title-row">
+                <h3 class="service-name">Snakes</h3>
+                <span class="service-name-tamil">பாம்பு</span>
+              </div>
+              <p class="service-desc">Safe snake removal</p>
+            </div>
+          </div>
+          <div class="service-card reveal" id="svc-spider">
+            <div class="service-card-img">
+              <img src="assets/pests/spider.jpg" alt="Spiders" loading="lazy" />
+            </div>
+            <div class="service-card-footer">
+              <div class="service-title-row">
+                <h3 class="service-name">Spiders</h3>
+                <span class="service-name-tamil">சிலந்திகள்</span>
+              </div>
+              <p class="service-desc">Web removal &amp; spray</p>
+            </div>
+          </div>
+          <div class="service-card reveal" id="svc-honeybee">
+            <div class="service-card-img">
+              <img src="assets/pests/honeybee.jpg" alt="Honey Bees" loading="lazy" />
+            </div>
+            <div class="service-card-footer">
+              <div class="service-title-row">
+                <h3 class="service-name">Honey Bees</h3>
+                <span class="service-name-tamil">தேனீக்கள்</span>
+              </div>
+              <p class="service-desc">Safe hive removal</p>
+            </div>
+          </div>
+          <div class="service-card reveal" id="svc-flea">
+            <div class="service-card-img">
+              <img src="assets/pests/flea.jpg" alt="Fleas" loading="lazy" />
+            </div>
+            <div class="service-card-footer">
+              <div class="service-title-row">
+                <h3 class="service-name">Fleas</h3>
+                <span class="service-name-tamil">தளர் உண்ணிகள்</span>
+              </div>
+              <p class="service-desc">Full property treatment</p>
+            </div>
+          </div>
+          <div class="service-card reveal" id="svc-housefly">
+            <div class="service-card-img">
+              <img src="assets/pests/housefly.jpg" alt="Housefly" loading="lazy" />
+            </div>
+            <div class="service-card-footer">
+              <div class="service-title-row">
+                <h3 class="service-name">Housefly</h3>
+                <span class="service-name-tamil">வீட்டு ஈ</span>
+              </div>
+              <p class="service-desc">Complete fly elimination</p>
+            </div>
+          </div>
+          <div class="service-card reveal" id="svc-lizard">
+            <div class="service-card-img">
+              <img src="assets/pests/lizard.jpg" alt="Lizards" loading="lazy" />
+            </div>
+            <div class="service-card-footer">
+              <div class="service-title-row">
+                <h3 class="service-name">Lizards</h3>
+                <span class="service-name-tamil">பல்லி</span>
+              </div>
+              <p class="service-desc">Humane deterrent solutions</p>
+            </div>
+          </div>
+          <div class="service-card reveal" id="svc-scorpion">
+            <div class="service-card-img">
+              <img src="assets/pests/scorpion.jpg" alt="Scorpion" loading="lazy" />
+            </div>
+            <div class="service-card-footer">
+              <div class="service-title-row">
+                <h3 class="service-name">Scorpion</h3>
+                <span class="service-name-tamil">தேள்</span>
+              </div>
+              <p class="service-desc">Full inspection &amp; removal</p>
+            </div>
+          </div>
+          <div class="service-card reveal" id="svc-earwig">
+            <div class="service-card-img">
+              <img src="assets/pests/earwig.jpg" alt="Earwigs" loading="lazy" />
+            </div>
+            <div class="service-card-footer">
+              <div class="service-title-row">
+                <h3 class="service-name">Earwigs</h3>
+                <span class="service-name-tamil">காது பூச்சி</span>
+              </div>
+              <p class="service-desc">Barrier spray treatment</p>
+            </div>
+          </div>
+          <div class="service-card reveal" id="svc-beetle">
+            <div class="service-card-img">
+              <img src="assets/pests/beetle.jpg" alt="Beetles" loading="lazy" />
+            </div>
+            <div class="service-card-footer">
+              <div class="service-title-row">
+                <h3 class="service-name">Beetles</h3>
+                <span class="service-name-tamil">வண்டுகள்</span>
+              </div>
+              <p class="service-desc">Fabric beetle control</p>
+            </div>
+          </div>
+          <div class="service-card reveal" id="svc-stinkbug">
+            <div class="service-card-img">
+              <img src="assets/pests/stinkbug.jpg" alt="Stink Bugs" loading="lazy" />
+            </div>
+            <div class="service-card-footer">
+              <div class="service-title-row">
+                <h3 class="service-name">Stink Bugs</h3>
+                <span class="service-name-tamil">துர்நாற்ற பூச்சி</span>
+              </div>
+              <p class="service-desc">Exclusion &amp; perimeter spray</p>
+            </div>
+          </div>
+          <div class="service-card reveal" id="svc-stinging">
+            <div class="service-card-img">
+              <img src="assets/pests/stinging.jpg" alt="Stinging Insects" loading="lazy" />
+            </div>
+            <div class="service-card-footer">
+              <div class="service-title-row">
+                <h3 class="service-name">Stinging Insects</h3>
+                <span class="service-name-tamil">கொடுக்கும் பூச்சி</span>
+              </div>
+              <p class="service-desc">Wasp &amp; hornet control</p>
+            </div>
+          </div>
+          <div class="service-card reveal" id="svc-tick">
+            <div class="service-card-img">
+              <img src="assets/pests/tick.jpg" alt="Ticks" loading="lazy" />
+            </div>
+            <div class="service-card-footer">
+              <div class="service-title-row">
+                <h3 class="service-name">Ticks</h3>
+                <span class="service-name-tamil">உண்ணிகள்</span>
+              </div>
+              <p class="service-desc">Indoor &amp; outdoor control</p>
+            </div>
+          </div>
+          <div class="service-card reveal" id="svc-weevil">
+            <div class="service-card-img">
+              <img src="assets/pests/weevil.jpg" alt="Weevils" loading="lazy" />
+            </div>
+            <div class="service-card-footer">
+              <div class="service-title-row">
+                <h3 class="service-name">Weevils</h3>
+                <span class="service-name-tamil">தானிய வண்டு</span>
+              </div>
+              <p class="service-desc">Fumigation treatment</p>
+            </div>
+          </div>
+          <div class="service-card reveal" id="svc-gnat">
+            <div class="service-card-img">
+              <img src="assets/pests/gnat.jpg" alt="Gnats" loading="lazy" />
+            </div>
+            <div class="service-card-footer">
+              <div class="service-title-row">
+                <h3 class="service-name">Gnats</h3>
+                <span class="service-name-tamil">சிறு ஈக்கள்</span>
+              </div>
+              <p class="service-desc">Source elimination</p>
+            </div>
+          </div>
+          <div class="service-card reveal" id="svc-fly">
+            <div class="service-card-img">
+              <img src="assets/pests/fly.jpg" alt="Flies" loading="lazy" />
+            </div>
+            <div class="service-card-footer">
+              <div class="service-title-row">
+                <h3 class="service-name">Flies</h3>
+                <span class="service-name-tamil">ஈக்கள்</span>
+              </div>
+              <p class="service-desc">ILT traps &amp; baiting</p>
+            </div>
           </div>
         </div>
       </div>

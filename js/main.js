@@ -4,18 +4,32 @@
 
 // ---- Header scroll ----
 const siteHeader = document.getElementById('site-header');
-const heroWrap   = document.querySelector('.hero-slider-wrap');
 window.addEventListener('scroll', () => {
-  const scrolled = window.pageYOffset > 40;
-  siteHeader.classList.toggle('header-scrolled', scrolled);
-  if (heroWrap) heroWrap.style.paddingTop = scrolled ? '72px' : '108px';
+  const scrolled = window.pageYOffset > 30;
+  if (siteHeader) siteHeader.classList.toggle('header-scrolled', scrolled);
 }, { passive: true });
 
-// ---- Mobile menu ----
-const menuBtn    = document.getElementById('menu-btn');
-const mobileMenu = document.getElementById('mobile-menu');
-if (menuBtn) menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
-function closeMobileMenu() { mobileMenu && mobileMenu.classList.add('hidden'); }
+// ---- Mobile Offcanvas Drawer ----
+const menuBtn           = document.getElementById('menu-btn');
+const offcanvasDrawer   = document.getElementById('offcanvas-drawer');
+const offcanvasClose    = document.getElementById('offcanvas-close');
+const offcanvasBackdrop = document.getElementById('offcanvas-backdrop');
+
+function openMobileMenu() {
+  if (offcanvasDrawer) offcanvasDrawer.classList.add('open');
+  if (offcanvasBackdrop) offcanvasBackdrop.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeMobileMenu() {
+  if (offcanvasDrawer) offcanvasDrawer.classList.remove('open');
+  if (offcanvasBackdrop) offcanvasBackdrop.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+if (menuBtn) menuBtn.addEventListener('click', openMobileMenu);
+if (offcanvasClose) offcanvasClose.addEventListener('click', closeMobileMenu);
+if (offcanvasBackdrop) offcanvasBackdrop.addEventListener('click', closeMobileMenu);
 
 // ---- Smooth scroll ----
 document.querySelectorAll('a[href^="#"]').forEach(a => {

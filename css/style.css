@@ -11,16 +11,222 @@ html{scroll-behavior:smooth}
 /* ============================  BRAND GRADIENT  ============================ */
 .brand-gradient-text{background:linear-gradient(135deg,#3B2FE8 0%,#6A3FD4 55%,#9B6BFF 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 
-/* ============================  HEADER  ============================ */
-#site-header{position:fixed;top:0;left:0;right:0;z-index:60;border-radius:0 0 20px 20px;overflow:hidden;box-shadow:0 4px 24px rgba(59,47,232,.10);transition:box-shadow .3s}
-#site-header.header-scrolled{box-shadow:0 6px 32px rgba(59,47,232,.18)}
-.topbar-inner{height:36px;background:linear-gradient(90deg,#3B2FE8,#6A3FD4);width:100%;display:flex;align-items:center;transition:height .35s ease;font-size:.78rem;font-weight:500;letter-spacing:.03em}
+/* ============================  HEADER & STICKY PILL NAVBAR  ============================ */
+#site-header{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:60;
+  background:transparent;
+  box-shadow:none;
+  transition:all .35s ease;
+}
+#site-header.header-scrolled{
+  pointer-events:none;
+}
+
+.topbar-inner{
+  pointer-events:auto;
+  height:36px;
+  background:linear-gradient(90deg,#3B2FE8,#6A3FD4);
+  width:100%;
+  display:flex;
+  align-items:center;
+  transition:transform .35s ease,opacity .3s ease,max-height .35s ease;
+  font-size:.78rem;
+  font-weight:500;
+  letter-spacing:.03em;
+  max-height:40px;
+  opacity:1;
+  overflow:hidden;
+}
 .topbar-inner > div{width:100%}
-#navbar{background:#fff;border-top:1px solid rgba(59,47,232,.06)}
-.nav-link{color:#6B6B8A;font-size:.88rem;font-weight:500;letter-spacing:.03em;transition:color .2s;position:relative;text-decoration:none}
-.nav-link::after{content:'';position:absolute;bottom:-3px;left:0;right:0;height:2px;background:linear-gradient(90deg,#3B2FE8,#6A3FD4);transform:scaleX(0);border-radius:99px;transition:transform .25s}
+#site-header.header-scrolled .topbar-inner{
+  max-height:0;
+  opacity:0;
+  transform:translateY(-100%);
+  pointer-events:none;
+}
+
+/* Initial / Default State: Neat, edge-to-edge fixed header like before */
+#navbar{
+  pointer-events:auto;
+  position:relative;
+  width:100%;
+  max-width:100%;
+  margin:0;
+  background:#fff;
+  border-bottom:1px solid #E8E6FF;
+  border-radius:0;
+  box-shadow:0 2px 14px rgba(59,47,232,0.06);
+  transition:width .35s cubic-bezier(0.4,0,0.2,1),
+             margin .35s cubic-bezier(0.4,0,0.2,1),
+             border-radius .35s cubic-bezier(0.4,0,0.2,1),
+             box-shadow .35s ease,
+             border-color .35s ease,
+             background .35s ease;
+}
+.navbar-row{
+  height:72px;
+  transition:height .35s ease;
+}
+
+/* Sticky / Scrolled State: Morph into floating pill capsule with space around it */
+#site-header.header-scrolled #navbar{
+  width:calc(100% - 32px);
+  max-width:1240px;
+  margin:12px auto 0;
+  border-radius:9999px;
+  border:1.5px solid rgba(59,47,232,0.18);
+  background:rgba(255,255,255,0.96);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  box-shadow:0 12px 38px rgba(26,21,48,0.16);
+}
+#site-header.header-scrolled .navbar-row{
+  height:66px;
+}
+@media(max-width:768px){
+  .navbar-row{height:66px}
+  #site-header.header-scrolled #navbar{
+    width:calc(100% - 20px);
+    margin:8px auto 0;
+    border-radius:9999px;
+  }
+}
+
+.nav-link{
+  color:#555570;
+  font-size:.88rem;
+  font-weight:600;
+  letter-spacing:.02em;
+  transition:color .2s;
+  position:relative;
+  text-decoration:none;
+  padding:.35rem 0;
+}
+.nav-link::after{
+  content:'';
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  height:2px;
+  background:linear-gradient(90deg,#3B2FE8,#6A3FD4);
+  transform:scaleX(0);
+  border-radius:99px;
+  transition:transform .25s;
+}
 .nav-link:hover{color:#3B2FE8}
 .nav-link:hover::after{transform:scaleX(1)}
+
+#navbar .btn-primary{
+  border-radius:9999px;
+  padding:.55rem 1.35rem;
+}
+
+/* ============================  OFFCANVAS MOBILE DRAWER  ============================ */
+.offcanvas-backdrop{
+  position:fixed;
+  inset:0;
+  background:rgba(15,10,40,.6);
+  backdrop-filter:blur(4px);
+  -webkit-backdrop-filter:blur(4px);
+  z-index:99;
+  opacity:0;
+  visibility:hidden;
+  transition:opacity .35s ease,visibility .35s ease;
+}
+.offcanvas-backdrop.open{
+  opacity:1;
+  visibility:visible;
+}
+.offcanvas-drawer{
+  position:fixed;
+  top:0;
+  right:0;
+  bottom:0;
+  width:min(320px,86vw);
+  height:100vh;
+  height:100dvh;
+  background:#fff;
+  z-index:100;
+  display:flex;
+  flex-direction:column;
+  box-shadow:-10px 0 40px rgba(26,21,48,.22);
+  transform:translateX(100%);
+  transition:transform .35s cubic-bezier(0.16,1,0.3,1);
+  overflow-y:auto;
+}
+.offcanvas-drawer.open{
+  transform:translateX(0);
+}
+.offcanvas-header{
+  padding:1.15rem 1.25rem;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-bottom:1px solid #E8E6FF;
+  background:#fff;
+  flex-shrink:0;
+}
+.offcanvas-close-btn{
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#F5F4FF;
+  color:#1A1530;
+  border:1px solid #E8E6FF;
+  cursor:pointer;
+  transition:all .2s ease;
+}
+.offcanvas-close-btn:hover{
+  background:#3B2FE8;
+  color:#fff;
+  border-color:#3B2FE8;
+}
+.offcanvas-body{
+  padding:1rem 1.25rem;
+  display:flex;
+  flex-direction:column;
+  gap:.35rem;
+  flex:1;
+}
+.offcanvas-link{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:.75rem .9rem;
+  border-radius:12px;
+  color:#1A1530;
+  font-weight:600;
+  font-size:.92rem;
+  text-decoration:none;
+  transition:all .2s ease;
+}
+.offcanvas-link:hover{
+  background:#F5F4FF;
+  color:#3B2FE8;
+  transform:translateX(4px);
+}
+.offcanvas-link .link-tamil{
+  font-size:.78rem;
+  color:#6A3FD4;
+  font-weight:700;
+}
+.offcanvas-footer{
+  padding:1.25rem;
+  border-top:1px solid #E8E6FF;
+  background:#FAFAFF;
+  display:flex;
+  flex-direction:column;
+  gap:.75rem;
+  flex-shrink:0;
+}
 
 /* ============================  BUTTONS  ============================ */
 .btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:.45rem;background:linear-gradient(135deg,#3B2FE8,#6A3FD4);color:#fff;font-weight:600;font-size:.88rem;padding:.6rem 1.4rem;border-radius:.55rem;letter-spacing:.02em;text-decoration:none;box-shadow:0 4px 14px rgba(59,47,232,.28);transition:all .3s;position:relative;overflow:hidden}
@@ -63,6 +269,7 @@ html{scroll-behavior:smooth}
 
 /* ============================  HERO  ============================ */
 .hero-slider-wrap{padding-top:108px}
+@media(max-width:640px){.hero-slider-wrap{padding-top:104px}}
 .hero-slider{position:relative;width:100%;height:calc(100vh - 108px);min-height:520px;max-height:780px;overflow:hidden;background:#0f0a28}
 .slide{position:absolute;inset:0;opacity:0;transition:opacity 1s ease;display:flex;align-items:center}
 .slide.active{opacity:1;z-index:2}
@@ -319,19 +526,101 @@ html{scroll-behavior:smooth}
   #scroll-top svg{width:18px;height:18px;}
 }
 
-/* ============================  ORIGINAL SERVICE CARDS  ============================ */
+/* ============================  PREMIUM SERVICE CARDS (FULL PHOTO)  ============================ */
 .svc-old-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-@media(min-width:640px){.svc-old-grid{grid-template-columns:repeat(3,1fr)}}
-@media(min-width:1024px){.svc-old-grid{grid-template-columns:repeat(4,1fr)}}
-@media(min-width:1280px){.svc-old-grid{grid-template-columns:repeat(5,1fr)}}
+@media(min-width:640px){.svc-old-grid{grid-template-columns:repeat(3,1fr);gap:18px}}
+@media(min-width:1024px){.svc-old-grid{grid-template-columns:repeat(4,1fr);gap:20px}}
+@media(min-width:1280px){.svc-old-grid{grid-template-columns:repeat(4,1fr);gap:22px}}
 
-.service-card{background:#fff;border:1.5px solid #E8E6FF;border-radius:16px;padding:1.5rem 1rem 1.25rem;text-align:center;transition:all .3s ease;position:relative;overflow:hidden}
-.service-card::before{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#3B2FE8,#6A3FD4);transform:scaleX(0);transition:transform .3s}
-.service-card:hover{border-color:rgba(59,47,232,.32);transform:translateY(-6px);box-shadow:0 16px 40px rgba(59,47,232,.13)}
-.service-card:hover::before{transform:scaleX(1)}
-.service-icon{width:72px;height:72px;background:linear-gradient(135deg,#EEF0FF,#F5F3FF);border:1.5px solid rgba(59,47,232,.14);border-radius:18px;display:flex;align-items:center;justify-content:center;margin:0 auto .875rem;transition:all .3s}
-.service-card:hover .service-icon{background:linear-gradient(135deg,rgba(59,47,232,.14),rgba(106,63,212,.08));border-color:rgba(59,47,232,.3);transform:scale(1.1) rotate(-4deg);box-shadow:0 6px 20px rgba(59,47,232,.2)}
-.service-icon img{width:40px;height:40px;object-fit:contain}
-.service-name{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:.95rem;color:#1A1530;letter-spacing:.02em;margin-bottom:.2rem}
-.service-name-tamil{font-family:'Noto Sans Tamil','Hind',sans-serif;font-size:.72rem;color:#6A3FD4;font-weight:600;margin-bottom:.35rem}
-.service-desc{font-size:.7rem;color:#9090B0;line-height:1.4}
+.service-card{
+  background:#fff;
+  border:1.5px solid #E8E6FF;
+  border-radius:18px;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  box-shadow:0 4px 18px rgba(59,47,232,.05);
+  transition:all .35s ease;
+  position:relative;
+}
+.service-card:hover{
+  border-color:#3B2FE8;
+  transform:translateY(-6px);
+  box-shadow:0 16px 42px rgba(59,47,232,.18);
+}
+.service-card::before{
+  content:'';
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  height:3px;
+  background:linear-gradient(90deg,#3B2FE8,#6A3FD4);
+  transform:scaleX(0);
+  transition:transform .3s;
+  z-index:2;
+}
+.service-card:hover::before{
+  transform:scaleX(1);
+}
+.service-card-img{
+  position:relative;
+  width:100%;
+  height:175px;
+  overflow:hidden;
+  background:#F2F0FF;
+}
+@media(max-width:640px){
+  .service-card-img{height:135px}
+}
+.service-card-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  transition:transform .45s ease;
+}
+.service-card:hover .service-card-img img{
+  transform:scale(1.08);
+}
+.service-card-footer{
+  padding:1rem 1.1rem 1.2rem;
+  display:flex;
+  flex-direction:column;
+  gap:.3rem;
+  flex:1;
+  background:#fff;
+  text-align:left;
+}
+@media(max-width:640px){
+  .service-card-footer{padding:.8rem .85rem 1rem}
+}
+.service-title-row{
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  gap:.5rem;
+  flex-wrap:wrap;
+}
+.service-name{
+  font-family:'Rajdhani',sans-serif;
+  font-weight:700;
+  font-size:1.1rem;
+  color:#1A1530;
+  letter-spacing:.01em;
+  margin:0;
+  line-height:1.2;
+}
+.service-name-tamil{
+  font-family:'Catamaran','Hind',sans-serif;
+  font-size:.78rem;
+  color:#6A3FD4;
+  font-weight:700;
+  margin:0;
+}
+.service-desc{
+  font-size:.74rem;
+  color:#6B6B8A;
+  line-height:1.45;
+  margin:0;
+}
