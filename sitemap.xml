@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://credopestcontrol.com/</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://credopestcontrol.com/assets/logo.png</image:loc>
+      <image:title>CREDO Pest Control Vellore</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://credopestcontrol.com/assets/pests/termite.jpg</image:loc>
+      <image:title>Termite Control in Vellore</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://credopestcontrol.com/assets/pests/cockroach.jpg</image:loc>
+      <image:title>Cockroach Pest Control Vellore</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://credopestcontrol.com/assets/pests/bedbug.jpg</image:loc>
+      <image:title>Bed Bug Treatment Vellore</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://credopestcontrol.com/assets/pests/mosquito.jpg</image:loc>
+      <image:title>Mosquito Fogging and Control Vellore</image:title>
+    </image:image>
+  </url>
+</urlset>
